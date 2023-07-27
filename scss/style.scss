@@ -1,1 +1,73 @@
+@charset 'UTF-8';
 @import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap');
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    header {
+        width: 20%;
+        height: 100%;
+        padding: 10vh 5vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-between; // align-items nowrap인경우
+
+        h1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            color: #fff;
+            i {
+                font-size: 5vw;
+                margin-bottom: 15px;
+            }
+            span {
+                width: 100%;
+                text-align: center;
+                font: normal 0.8vw/1 'arial';
+            }
+        }
+
+        p {
+            font: normal 11px/1.2 'arial';
+            color: #888;
+            text-align: center; }
+    }
+
+    section {
+        width: 80%;
+        height: 100%;
+        padding-top: 10vh;
+        display: flex;
+
+        article {
+            flex: 1;
+            border: 1px solid aqua;
+        }
+    }
+
+    nav {
+        position: absolute;
+        top: 6vh;
+        right: 5vw;
+
+        ul {
+            display: flex;
+
+            li {
+                margin: 15px;
+
+                a{
+                    font-size: 18px;
+                    color: #bbb;
+                }
+            }
+        }
+    }
+}
+
