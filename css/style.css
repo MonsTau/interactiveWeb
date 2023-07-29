@@ -60,11 +60,95 @@ main section {
 }
 main section article {
   flex: 1;
-  border: 1px solid aqua;
+  transition: 0.5s;
+  position: relative;
+  border: 1px solid black;
+}
+main section article::before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 95%;
+  position: absolute;
+  top: 0px;
+  left: -100px;
+  opacity: 0;
+  background: #444;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+main section article .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding: 50px 30px 100px;
+}
+main section article .inner .txt {
+  padding-top: 90px;
+  transition: 1s;
+}
+main section article .inner h2 {
+  font: normal 2vw/1 "Alegreya sans sc";
+  color: #fff;
+  margin-bottom: 40px;
+  transition: 1s;
+}
+main section article .inner h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #777;
+  margin-top: 20px;
+  transition: 1.5s;
+}
+main section article .inner p {
+  font: 14px/1.4 "arial";
+  color: #777;
+}
+main section article .inner figure {
+  width: 100%;
+  height: 15vh;
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s;
+  top: 0px;
+  box-sizing: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  filter: saturate(0.2);
+}
+main section article .inner figure video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main section article:hover {
+  flex: 1.3;
+}
+main section article:hover::before {
+  left: 0%;
+  opacity: 1;
+}
+main section article:hover .inner .txt {
+  padding-top: 20px;
+}
+main section article:hover .inner .txt h2 {
+  font-size: 5vw;
+}
+main section article:hover .inner .txt h2::after {
+  width: 120px;
+  background: orange;
+}
+main section article:hover .inner figure {
+  height: 20vh;
+  top: 25px;
+  filter: saturate(1.2);
 }
 main nav {
   position: absolute;
-  top: 6vh;
+  top: 4vh;
   right: 5vw;
 }
 main nav ul {
