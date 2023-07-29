@@ -1,0 +1,34 @@
+* { margin: 0; padding: 0; }
+
+.container {
+    background: beige;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column-reverse;  default value : row */
+    /*flex-wrap: wrap-reverse;  default value: nowrap */
+    flex-flow: row wrap;
+    justify-content: space-between; /* default value: flex-start; flex-end, center, */
+                                    /* space-around, space-between, 중심축*/
+    align-items: baseline;          /* 해당열에서 default는 Top기준 */
+    align-content: space-between;;  /* 반대축 */
+}
+
+.item {
+    width: 40px;
+    height: 40px; 
+    border: 1px solid black; 
+}
+
+.item1 {
+    background: #ef9a9a;
+    padding: 20px;
+    flex: 2 2 auto;
+}
+
+.item2 {
+    background: #f48fb1;
+}
+
+.item3 {
+    background: #ce93d8;
+}
